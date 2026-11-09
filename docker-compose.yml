@@ -1,5 +1,5 @@
 services:
-  # OpenRelik Worker for AGTI Malware Analysis
+  # OpenRelik Worker for Agentic Google Threat Intelligence
   openrelik-worker-agti:
     container_name: openrelik-worker-agti
     build:

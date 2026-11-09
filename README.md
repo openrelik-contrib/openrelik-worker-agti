@@ -16,8 +16,8 @@ This worker provides two tasks:
     (`openrelik-worker-agti.tasks.yara_importer`): Expands threat scenario
     prompts or keywords via AGTI, queries the VirusTotal Crowdsourced YARA Hub
     (`/api/v3/yara_rules`), and writes deduplicated `<rule_name>.yar` files to
-    the shared OpenRelik YARA directory (`/usr/share/openrelik/data/yara/`)
-    while passing input files through to downstream scanners.
+    the shared OpenRelik YARA directory while passing input files through to
+    downstream scanners.
 
 ## Deploy
 
