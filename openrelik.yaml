@@ -1,0 +1,12 @@
+# Showcase this worker on https://openrelik.org/marketplace
+publish: false
+
+# Worker Metadata. This section is required.
+display_name: Enrich Findings with Agentic GTI
+description: Queries Agentic Google Threat Intelligence (AGTI) to enrich IoCs, triage YARA scan results, or investigate hashes.
+
+# Optional: Third-Party Tools Used by the Worker.
+tools:
+  - display_name: Google Threat Intelligence (AGTI)
+    description: Agentic Google Threat Intelligence platform for malware analysis and threat investigation
+    url: https://www.virustotal.com

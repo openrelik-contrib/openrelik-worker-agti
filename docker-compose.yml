@@ -1,0 +1,21 @@
+services:
+  # OpenRelik Worker for AGTI Malware Analysis
+  openrelik-worker-agti:
+    container_name: openrelik-worker-agti
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: openrelik-worker-agti:latest
+    restart: always
+    environment:
+      - REDIS_URL=redis://openrelik-redis:6379
+      - OPENRELIK_PYDEBUG=0
+      # Configure your Google Threat Intelligence (GTI) API key here or in .env
+      - GTI_API_KEY=${GTI_API_KEY}
+    volumes:
+      - ./data:/usr/share/openrelik/data
+    command: "celery --app=src.app worker --task-events --concurrency=4 --loglevel=INFO -Q openrelik-worker-agti"
+
+networks:
+  default:
+    name: openrelik_default
