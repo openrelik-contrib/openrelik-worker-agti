@@ -1,0 +1,22 @@
+{
+  "name": "openrelik-worker-agti",
+  "image": "mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/uv:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "uv sync --locked",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+      }
+    }
+  }
+}

@@ -17,5 +17,6 @@ coverage.xml
 .pytest_cache
 .venv
 .vscode
+.devcontainer
 .github
 .gitignore
