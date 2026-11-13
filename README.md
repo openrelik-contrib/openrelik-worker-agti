@@ -26,7 +26,7 @@ Add the below configuration to the OpenRelik `docker-compose.yml` file.
 ```yaml
 openrelik-worker-agti:
     container_name: openrelik-worker-agti
-    image: ghcr.io/openrelik/openrelik-worker-agti:latest
+    image: ghcr.io/openrelik-contrib/openrelik-worker-agti:latest
     restart: always
     environment:
       - REDIS_URL=redis://openrelik-redis:6379
