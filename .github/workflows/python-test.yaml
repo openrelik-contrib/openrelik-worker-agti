@@ -20,8 +20,9 @@ jobs:
       - name: Test with pytest
         run: uv run --locked pytest -s --cov=. --cov-branch --cov-report=xml -v
 
-      # Uncomment if CODECOV_TOKEN is configured for this repository:
-      # - name: Upload coverage reports to Codecov
-      #   uses: codecov/codecov-action@v5
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: false

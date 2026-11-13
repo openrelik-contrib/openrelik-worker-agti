@@ -1,3 +1,7 @@
+[![Create and publish a Docker image](https://github.com/openrelik-contrib/openrelik-worker-agti/actions/workflows/docker-image.yaml/badge.svg?branch=main)](https://github.com/openrelik-contrib/openrelik-worker-agti/actions/workflows/docker-image.yaml?query=branch%3Amain)
+[![Python Tests](https://github.com/openrelik-contrib/openrelik-worker-agti/actions/workflows/python-test.yaml/badge.svg?branch=main)](https://github.com/openrelik-contrib/openrelik-worker-agti/actions/workflows/python-test.yaml?query=branch%3Amain)
+[![Test Coverage](https://img.shields.io/codecov/c/github/openrelik-contrib/openrelik-worker-agti/main?label=Test%20Coverage)](https://app.codecov.io/gh/openrelik-contrib/openrelik-worker-agti/tree/main)
+
 ## Description
 
 OpenRelik worker that integrates with **Agentic Google Threat Intelligence
