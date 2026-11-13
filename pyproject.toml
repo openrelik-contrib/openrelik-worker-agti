@@ -21,4 +21,11 @@ test = [
 
 [tool.uv]
 package = false
-default-groups = []
+default-groups = ["test"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
