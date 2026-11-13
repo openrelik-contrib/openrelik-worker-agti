@@ -42,6 +42,6 @@ openrelik-worker-agti:
 ## Test
 
 ```shell
-uv sync --group test
+uv sync
 uv run pytest -s --cov=.
 ```

@@ -22,17 +22,17 @@ WORKDIR /openrelik
 # Install the latest uv binaries
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-# Copy pyproject.toml and install dependencies
-COPY pyproject.toml .
+# Copy project configuration and install dependencies
+COPY uv.lock pyproject.toml .python-version ./
 
-# Install the project's dependencies using settings
-RUN uv sync --no-install-project --no-dev
+# Install the project's dependencies using the lockfile and settings
+RUN uv sync --locked --no-install-project --no-default-groups
 
 # Copy project files
 COPY . ./
 
 # Installing separately from its dependencies allows optimal layer caching
-RUN uv sync --no-dev
+RUN uv sync --locked --no-default-groups
 
 # Install the worker and set environment to use the correct python interpreter.
 ENV PATH="/openrelik/.venv/bin:$PATH"
